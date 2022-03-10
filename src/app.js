@@ -3,7 +3,7 @@ const session = require('express-session');
 const nunjucks = require('nunjucks');
 require('dotenv').config();
 
-const sessionManager = require('./modules/session');
+const sessionManager = require('./modules/sessionManager');
 
 const app = express();
 const port = process.env.SERVER_PORT;
