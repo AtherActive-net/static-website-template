@@ -10,6 +10,10 @@ const port = process.env.SERVER_PORT;
 
 app.use(session(sessionManager.sess));
 app.use(express.static('../public'));
+nunjucks.configure('./public', {
+    autoescape: false,
+    express: app
+});
 
 // Routing
 const base = require('./routers/base.router');
